@@ -7,7 +7,7 @@
 ## b. Cú pháp PHP cơ bản
 Các tập lệnh PHP được thực thi trên máy chủ và kết quả được trả về trình duyệt dưới dạng HTML thuần túy. Có thể chèn PHP vào mã HTML của bằng thẻ `<?php ... ?>`.
 
-`php
+```html
 <!DOCTYPE html>
 <html>
 <body>
@@ -20,7 +20,7 @@ echo "Hello, World!";
 
 </body>
 </html>
-`
+```
 
 - `<?php ... ?>`: Mã PHP nằm bên trong các thẻ này.
 - `echo`: Xuất nội dung ra trang web.
@@ -32,8 +32,8 @@ Biến PHP bắt đầu bằng dấu $
 - Integer: Số nguyên (`123`)
 - float: Số thập phân (`3.14`)
 - Boolean: Đúng hoặc sai (`true` hoặc `false`)
-- array: Một tập hợp các giá trị ( [1, 2, 3] )
-- : Một thể hiện của một lớp.
+- array: Một tập hợp các giá trị ( `[1, 2, 3] `)
+- Object: Một thể hiện của một lớp.
 
 ## e. Các toán tử cơ bản
 - Số học: `+`, `-`, `*`, `/`, `%` (modulo)
@@ -44,7 +44,7 @@ Biến PHP bắt đầu bằng dấu $
 ## f. var_dump function
 -> see what a variable contains 
 ex: 
-` 
+```php 
 <?php
 $message = "Hello, Tu Quyen!"
 $age = 22
@@ -52,26 +52,27 @@ $height = 1.52
 
 var_dump($message);
 ?>
-`
+```
 => Output: string(16)"Hello, Tu Quyen!"
 
 ##h. Nối chuỗi trong php (dùng dấu . )
-`
+```php 
 <?php
 $message = "Hello";
 $name = "Quyen"
 
 echo $message . " " . $name
 ?>
-`
+```
 => Output: Hello Tu Quyen
+
 
 # 2. Cấu trúc điều khiển
 
 ## a. If-Else
 Kiểm soát luồng chương trình bằng các câu lệnh điều kiện.
 
-`php
+```php
 <?php
 $age = 20;
 if ($age >= 18) {
@@ -80,24 +81,24 @@ echo "Bạn là người lớn.";
 echo "Bạn chưa phải là người lớn.";
 }
 ?>
-`
+```
 
 ## b. Vòng lặp
 PHP hỗ trợ các vòng lặp như `for`, `while` và `foreach`.
 
 - Vòng lặp For:
 
-`php
+```php
 <?php
 for ($i = 0; $i < 5; $i++) {
 echo "Số: $i<br>";
 }
 ?>
-`
+```
 
 - Vòng lặp While:
 
-`php
+```php
 <?php
 $i = 0;
 while ($i < 5) {
@@ -105,30 +106,30 @@ echo "Số: $i<br>";
 $i++;
 }
 ?>
-`
+```
 
 - Vòng lặp Foreach (dùng cho mảng):
 
-`php
+```php
 <?php
 $colors = ["red", "green", "blue"];
 foreach ($colors as $color) {
 echo "Màu: $color<br>";
 }
 ?>
-`
+```
 
 # 3. Hàm
 Bạn có thể tạo các khối mã có thể tái sử dụng trong PHP bằng các hàm.
 
-`php
+```php
 <?php
 function greet($name) {
 return "Hello, $name!";
 }
 echo greet("Alice");
 ?>
-`
+```
 
 - Hàm có thể có tham số và trả về giá trị.
 - Bạn có thể sử dụng `return` để gửi giá trị trở lại cho người gọi.
@@ -136,37 +137,37 @@ echo greet("Alice");
 # 4. Mảng
 Mảng PHP cho phép bạn lưu trữ nhiều giá trị trong một biến duy nhất.
 
-`php
+```php
 <?php
 $numbers = [1, 2, 3, 4, 5];
 echo $numbers[0]; // Đầu ra 1
 ?>
-`
+```
 
 - Mảng kết hợp: Mảng có khóa là chuỗi thay vì số.
 
-`php
+```php
 <?php
 $ages = ["Alice" => 25, "Bob" => 30];
 echo $ages["Alice"]; // Đầu ra 25
 ?>
-`
+```
 
 # 5. Làm việc với Biểu mẫu
 PHP có thể được sử dụng để xử lý dữ liệu biểu mẫu HTML.
 
 - Biểu mẫu HTML:
 
-`html
+```html
 <form method="POST" action="process.php">
 Tên: <input type="text" name="name">
 <input type="submit" value="Submit">
 </form>
-`
+```
 
 - PHP để xử lý việc gửi biểu mẫu (process.php):
 
-`php
+```php
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $name = $_POST['name'];
@@ -174,12 +175,12 @@ echo "Xin chào, $name!";
 
 }
 ?>
-`
+```
 
 # 6. Kết nối với MySQL
 PHP có thể tương tác với cơ sở dữ liệu MySQL bằng PDO hoặc MySQLi.
 
-`php
+```php
 <?php
 $servername = "localhost";
 $username = "root";
@@ -206,4 +207,4 @@ echo "0 results";
 }
 $conn->close();
 ?>
-`
+```
