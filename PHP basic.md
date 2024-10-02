@@ -66,7 +66,6 @@ echo $message . " " . $name
 ```
 => Output: Hello Tu Quyen
 
-
 # 2. Cấu trúc điều khiển
 
 ## a. If-Else
@@ -119,6 +118,29 @@ echo "Màu: $color<br>";
 ?>
 ```
 
+## c. Switch 
+```php
+<?php
+
+$day= "Tue";
+
+Switch($day){
+  Case "Mon":
+      echo "Monday";
+       break;
+  Case "Tue":
+      echo "Tuesday";
+       break;
+  Case ...
+       break;
+  Default:
+      echo "unavailble";
+      break;
+}
+
+?>
+```
+
 # 3. Hàm
 Bạn có thể tạo các khối mã có thể tái sử dụng trong PHP bằng các hàm.
 
@@ -133,9 +155,29 @@ echo greet("Alice");
 
 - Hàm có thể có tham số và trả về giá trị.
 - Bạn có thể sử dụng `return` để gửi giá trị trở lại cho người gọi.
+# Array in PHP
+- Array có thể chứa nhiều kiểu dữ liệu
+- 1 Array có thể chứa nhiều arrays nhỏ bên trong, các arrays con ngăn cách nhau bởi dấu `,`
+- Only integers and strings can be used as array indexes
+  ## Syntax
+  ```php
+  $data = [];
+  $data = array();
+  ```
 
-# 4. Mảng
-Mảng PHP cho phép bạn lưu trữ nhiều giá trị trong một biến duy nhất.
+```php
+<?php
+$information = [
+  "message" => "Hello ",
+  "name" => "Tu Quyen",
+  "age" => 22,
+  "height" => 1.52,
+  "status" => false
+  "relationship" => null
+  ];
+?>
+```
+- Mảng PHP cho phép bạn lưu trữ nhiều giá trị trong một biến duy nhất.
 
 ```php
 <?php
@@ -152,6 +194,8 @@ $ages = ["Alice" => 25, "Bob" => 30];
 echo $ages["Alice"]; // Đầu ra 25
 ?>
 ```
+> Create a variable called array that contains an array with three simple values. These values can be whatever you like. Explicitly assign the string index of "third" to the third element. Write a foreach  loop that contains the following statement to print out each element of the array, along with its index: echo "$index = $value.";
+
 
 # 5. Làm việc với Biểu mẫu
 PHP có thể được sử dụng để xử lý dữ liệu biểu mẫu HTML.
