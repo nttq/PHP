@@ -27,18 +27,44 @@ echo "Hello, World!";
 - Lưu tệp này với phần mở rộng `.php`, ví dụ: `index.php`.
 
 ## c. Biến
-Biến PHP bắt đầu bằng dấString: Văn bản (`"Xin chào"`)
-- Số nguyên: Số nguyên (`123`)
-- Số thực: Số thập phân (`3.14`)
+Biến PHP bắt đầu bằng dấu $
+- String: Văn bản (`"Xin chào"`)
+- Integer: Số nguyên (`123`)
+- float: Số thập phân (`3.14`)
 - Boolean: Đúng hoặc sai (`true` hoặc `false`)
-- Mảng: Một tập hợp các giá trị (`[1, 2, 3]`)
-- Đối tượng: Một thể hiện của một lớp.
+- array: Một tập hợp các giá trị ( [1, 2, 3] )
+- : Một thể hiện của một lớp.
 
 ## e. Các toán tử cơ bản
 - Số học: `+`, `-`, `*`, `/`, `%` (modulo)
 - Bài tập: `=`, `+=`, `-=`, `*=`, `/=`
 - So sánh: `==`, `!=`, `>`, `<`, `>=`, `<=`
 - Logic: `&&` (AND), `||` (OR), `!` (NOT)
+
+## f. var_dump function
+-> see what a variable contains 
+ex: 
+` 
+<?php
+$message = "Hello, Tu Quyen!"
+$age = 22
+$height = 1.52
+
+var_dump($message);
+?>
+`
+=> Output: string(16)"Hello, Tu Quyen!"
+
+##h. Nối chuỗi trong php (dùng dấu . )
+`
+<?php
+$message = "Hello";
+$name = "Quyen"
+
+echo $message . " " . $name
+?>
+`
+=> Output: Hello Tu Quyen
 
 # 2. Cấu trúc điều khiển
 
