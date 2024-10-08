@@ -187,4 +187,4 @@ $car->drive();  // Output: Xe Honda đang chạy!
 - **Class (Lớp)**: Là khuôn mẫu để tạo đối tượng, chứa các thuộc tính và phương thức.
 - **Object (Đối tượng)**: Là một thực thể cụ thể của lớp, có thể truy cập và sử dụng các thuộc tính và phương thức của lớp.
 - **Constructor (Hàm khởi tạo)**: Được gọi tự động khi đối tượng được tạo, dùng để khởi tạo giá trị ban đầu cho đối tượng.
-- **Kế thừa**: Một lớp có thể kế thừa từ lớp khác để tái sử dụng mã và mở rộng chức năng.
+- **Kế thừa (Inheritance)**: Một lớp có thể kế thừa từ lớp khác để tái sử dụng mã và mở rộng chức năng.
