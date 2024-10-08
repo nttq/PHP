@@ -7,6 +7,7 @@ Một **lớp** trong PHP là một khuôn mẫu hoặc bản thiết kế cho c
 #### Cú pháp tạo lớp:
 
 ```php
+<?php
 class ClassName {
     // Thuộc tính (properties)
     public $property1;
@@ -17,6 +18,7 @@ class ClassName {
         // Nội dung của phương thức
     }
 }
+?>
 ```
 
 - **`$property1`, `$property2`**: Đây là các thuộc tính của lớp, có thể lưu trữ dữ liệu cho đối tượng.
